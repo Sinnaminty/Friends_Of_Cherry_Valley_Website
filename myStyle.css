@@ -1,0 +1,54 @@
+.partnersList {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: black;
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    
+}
+
+ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    max-width: 800px;
+}
+
+ul li {
+    flex: 10 10 50%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.partnerLinks {
+    text-decoration: none;
+    font-size: x-large;
+    color: white;
+
+}
+
+.partnerLinks:hover {
+    text-decoration: underline;
+    color: blue;
+
+}
+
+.partnersFooter {
+    display: grid;
+    justify-content: left;
+    text-align: left;
+    color: blue;
+}
+
+body {
+    background-color: whitesmoke;
+}
