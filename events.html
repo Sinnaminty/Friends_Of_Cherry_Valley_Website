@@ -5,117 +5,157 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
+	<style>
+	body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f9;
+      }
+
+      #page-wrapper {
+        width: 100%;
+        margin: 0;
+      }
+
+      #header {
+        background-color: #333;
+        color: white;
+        padding: 10px;
+        text-align: center;
+      }
+
+      #header h1 {
+        margin: 0;
+      }
+
+      #calendar {
+        margin: 20px;
+      }
+
+      #calendar h2 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      /* Grid layout for calendar */
+      #calendar-grid {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        gap: 5px;
+        text-align: center;
+      }
+
+      .day, .day-name {
+        padding: 15px;
+        border: 1px solid #ddd;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s;
+      }
+
+      .day:hover {
+        background-color: #f0f0f0;
+      }
+
+      .day-name {
+        font-weight: bold;
+        background-color: #f4f4f9;
+        color: #333;
+      }
+
+      /* Event Details */
+      #event-details {
+        margin-top: 20px;
+        background-color: white;
+        padding: 20px;
+        border: 1px solid #ddd;
+      }
+
+      #event-details h3 {
+        margin-top: 0;
+      }
+
+      #event-info h4 {
+        margin: 10px 0;
+      }
+
+      a {
+        color: #4CAF50;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+	  .month-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 15px;
+      }
+
+      .month-header button {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      .month-header button:hover {
+        background-color: #45a049;
+      }
+    </style>
 	<head>
-		<title>Dopetrope by HTML5 UP</title>
+		<title>Events Calendar</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="CSS/Style.css" />
 	</head>
 	<body class="no-sidebar is-preload">
 		<div id="page-wrapper">
 
 			<!-- Header -->
-				<section id="header">
-
-					<!-- Logo -->
-						<h1><a href="index.html">Dopetrope</a></h1>
-
-					<!-- Nav -->
-						<nav id="nav">
-							<ul>
-								<li><a href="index.html">Home</a></li>
-								<li>
-									<a href="#">Dropdown</a>
-									<ul>
-										<li><a href="#">Lorem ipsum dolor</a></li>
-										<li><a href="#">Magna phasellus</a></li>
-										<li><a href="#">Etiam dolore nisl</a></li>
-										<li>
-											<a href="#">Phasellus consequat</a>
-											<ul>
-												<li><a href="#">Magna phasellus</a></li>
-												<li><a href="#">Etiam dolore nisl</a></li>
-												<li><a href="#">Veroeros feugiat</a></li>
-												<li><a href="#">Nisl sed aliquam</a></li>
-												<li><a href="#">Dolore adipiscing</a></li>
-											</ul>
-										</li>
-										<li><a href="#">Veroeros feugiat</a></li>
-									</ul>
-								</li>
-								<li><a href="left-sidebar.html">Left Sidebar</a></li>
-								<li><a href="right-sidebar.html">Right Sidebar</a></li>
-								<li class="current"><a href="no-sidebar.html">No Sidebar</a></li>
-							</ul>
-						</nav>
-
-				</section>
-
-			<!-- Main -->
-				<section id="main">
-					<div class="container">
-
-						<!-- Content -->
-							<article class="box post">
-								<a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
-								<header>
-									<h2>No Sidebar</h2>
-									<p>Lorem ipsum dolor sit amet feugiat</p>
-								</header>
-								<p>
-									Vestibulum scelerisque ultricies libero id hendrerit. Vivamus malesuada quam faucibus ante dignissim auctor
-									hendrerit libero placerat. Nulla facilisi. Proin aliquam felis non arcu molestie at accumsan turpis commodo.
-									Proin elementum, nibh non egestas sodales, augue quam aliquet est, id egestas diam justo adipiscing ante.
-									Pellentesque tempus nulla non urna eleifend ut ultrices nisi faucibus.
-									Vestibulum scelerisque ultricies libero id hendrerit. Vivamus malesuada quam faucibus ante dignissim auctor
-									hendrerit libero placerat. Nulla facilisi. Proin aliquam felis non arcu molestie at accumsan turpis commodo.
-									Proin elementum, nibh non egestas sodales, augue quam aliquet est, id egestas diam justo adipiscing ante.
-								</p>
-								<p>
-									Praesent a dolor leo. Duis in felis in tortor lobortis volutpat et pretium tellus. Vestibulum ac ante nisl,
-									a elementum odio. Duis semper risus et lectus commodo fringilla. Maecenas sagittis convallis justo vel mattis.
-									placerat, nunc diam iaculis massa, et aliquet nibh leo non nisl vitae porta lobortis, enim neque fringilla nunc,
-									eget faucibus lacus sem quis nunc suspendisse nec lectus sit amet augue rutrum vulputate ut ut mi. Aenean
-									elementum, mi sit amet porttitor lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor.
-								</p>
-								<section>
-									<header>
-										<h3>Something else</h3>
-									</header>
-									<p>
-										Elementum odio duis semper risus et lectus commodo fringilla. Maecenas sagittis convallis justo vel mattis.
-										placerat, nunc diam iaculis massa, et aliquet nibh leo non nisl vitae porta lobortis, enim neque fringilla nunc,
-										eget faucibus lacus sem quis nunc suspendisse nec lectus sit amet augue rutrum vulputate ut ut mi. Aenean
-										elementum, mi sit amet porttitor lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor
-										sit amet nullam consequat feugiat dolore tempus.
-										Elementum odio duis semper risus et lectus commodo fringilla. Maecenas sagittis convallis justo vel mattis.
-										placerat, nunc diam iaculis massa, et aliquet nibh leo non nisl vitae porta lobortis, enim neque fringilla nunc,
-										eget faucibus lacus sem quis nunc suspendisse nec lectus sit amet augue rutrum vulputate ut ut mi. Aenean
-										elementum, mi sit amet porttitor lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor.
-									</p>
-									<p>
-										Nunc diam iaculis massa, et aliquet nibh leo non nisl vitae porta lobortis, enim neque fringilla nunc,
-										eget faucibus lacus sem quis nunc suspendisse nec lectus sit amet augue rutrum vulputate ut ut mi. Aenean
-										elementum, mi sit amet porttitor lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor
-										sit amet nullam consequat feugiat dolore tempus.
-									</p>
-								</section>
-								<section>
-									<header>
-										<h3>So in conclusion ...</h3>
-									</header>
-									<p>
-										Nunc diam iaculis massa, et aliquet nibh leo non nisl vitae porta lobortis, enim neque fringilla nunc,
-										eget faucibus lacus sem quis nunc suspendisse nec lectus sit amet augue rutrum vulputate ut ut mi. Aenean
-										elementum, mi sit amet porttitor lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor
-										sit amet nullam consequat feugiat dolore tempus. Elementum odio duis semper risus et lectus commodo fringilla.
-										Maecenas sagittis convallis justo vel mattis.
-									</p>
-								</section>
-							</article>
-
+			<section id="header">
+				<h1>Events Calendar</h1>
+				<!-- Nav -->
+				<nav id="nav">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="about-us.html">About Us</a></li>
+						<li class = "current"><a href="events.html">Events</a></li>
+						<li><a href="Photo gallery.html">Photo Gallery</a></li>
+						<li><a href="donate.html">Donate</a></li>
+						<li><a href="membership.html">Membership</a></li>
+						<li><a href="Partner Page.html">Partners</a></li>
+					</ul>
+				</nav>
+			  </section>
+		
+			  <!-- Main Section -->
+			  <section id="main">
+				<div class="container">
+				  
+				  <!-- Calendar Section -->
+				  <section id="calendar">
+					<div class="month-header">
+					  <button id="prev-month">Prev</button>
+					  <h2 id="month-year"></h2>
+					  <button id="next-month">Next</button>
 					</div>
-				</section>
+					<div id="calendar-grid"></div>
+				  </section>
+				  
+				  <!-- Event Details Section -->
+				  <section id="event-details">
+					<h3>Event Details</h3>
+					<div id="event-info"></div>
+				  </section>
+				</div>
+			</section>
+		</div>
 
 			<!-- Footer -->
 				<section id="footer">
@@ -157,14 +197,10 @@
 							</div>
 							<div class="col-4 col-12-medium">
 								<section>
-									<header>
-										<h2>What's this all about?</h2>
-									</header>
+								
 									<a href="#" class="image featured"><img src="images/pic10.jpg" alt="" /></a>
 									<p>
-										This is <strong>Dopetrope</strong> a free, fully responsive HTML5 site template by
-										<a href="http://twitter.com/ajlkn">AJ</a> for <a href="http://html5up.net/">HTML5 UP</a> It's released for free under
-										the <a href="http://html5up.net/license/">Creative Commons Attribution</a> license so feel free to use it for any personal or commercial project &ndash; just don't forget to credit us!
+										<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScbSqltidbBPF0sJ-89Idld7XFWGlW4ZVXoxMzyScGnkZhIAg/viewform?embedded=true" width="320" height="721" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 									</p>
 									<footer>
 										<ul class="actions">
@@ -258,6 +294,111 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+				// Data structure to store events, added manually in code
+				let events = [
+				  {
+					date: "2024-12-28",
+					title: "Winter Raptor Fest",
+					description: "Join us for guided bird walk",
+					pdf: "img/Winter Raptor Fest 2024 Flyer (1).jpg"
+				  },
+				  {
+					date: "2024-11-15",
+					title: "Sample Event 2",
+					description: "This is another event with a different PDF.",
+					pdf: "path_to_pdf/sample2.pdf"
+				  }
+				];
+		  
+				let currentMonth = new Date().getMonth(); // Current month
+				let currentYear = new Date().getFullYear(); // Current year
+		  
+				// Function to generate the calendar for the current month
+				function generateCalendar() {
+				  const calendarGrid = document.getElementById("calendar-grid");
+				  const monthYear = document.getElementById("month-year");
+				  
+				  // Get the first and last day of the current month
+				  const firstDay = new Date(currentYear, currentMonth, 1);
+				  const lastDay = new Date(currentYear, currentMonth + 1, 0);
+				  
+				  // Array of weekday names
+				  const weekdays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+		  
+				  // Clear previous calendar grid
+				  calendarGrid.innerHTML = '';
+				  monthYear.textContent = `${firstDay.toLocaleString('default', { month: 'long' })} ${currentYear}`;
+		  
+				  // Add weekday names (Sun, Mon, Tue, etc.)
+				  weekdays.forEach(day => {
+					const dayName = document.createElement('div');
+					dayName.classList.add('day-name');
+					dayName.textContent = day;
+					calendarGrid.appendChild(dayName);
+				  });
+		  
+				  // Add blank cells for days before the first of the month
+				  for (let i = 0; i < firstDay.getDay(); i++) {
+					calendarGrid.appendChild(document.createElement('div'));
+				  }
+		  
+				  // Add cells for each day of the month
+				  for (let day = 1; day <= lastDay.getDate(); day++) {
+					const dayCell = document.createElement('div');
+					dayCell.classList.add('day');
+					dayCell.textContent = day;
+					dayCell.setAttribute('data-date', `${currentYear}-${currentMonth + 1}-${day}`);
+					dayCell.addEventListener('click', showEventDetails);
+					calendarGrid.appendChild(dayCell);
+				  }
+				}
+		  
+				// Function to display events for the clicked date
+				function showEventDetails(e) {
+				  const selectedDate = e.target.getAttribute('data-date');
+				  const eventList = events.filter(event => event.date === selectedDate);
+				  
+				  const eventInfo = document.getElementById("event-info");
+				  eventInfo.innerHTML = '';
+		  
+				  if (eventList.length > 0) {
+					eventList.forEach(event => {
+					  eventInfo.innerHTML += `
+						<h4>${event.title}</h4>
+						<p>${event.description}</p>
+						<a href="${event.pdf}" target="_blank">Download PDF</a>
+						<hr />
+					  `;
+					});
+				  } else {
+					eventInfo.innerHTML = '<p>No events for this day.</p>';
+				  }
+				}
+		  
+				// Function to go to the previous month
+				document.getElementById("prev-month").addEventListener("click", function() {
+				  currentMonth--;
+				  if (currentMonth < 0) {
+					currentMonth = 11;
+					currentYear--;
+				  }
+				  generateCalendar();
+				});
+		  
+				// Function to go to the next month
+				document.getElementById("next-month").addEventListener("click", function() {
+				  currentMonth++;
+				  if (currentMonth > 11) {
+					currentMonth = 0;
+					currentYear++;
+				  }
+				  generateCalendar();
+				});
+		  
+				// Initial call to generate the calendar
+				generateCalendar();
+			  </script>
 
 	</body>
 </html>
