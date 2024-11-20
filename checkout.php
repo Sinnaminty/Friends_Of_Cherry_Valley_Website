@@ -211,9 +211,67 @@ if (isset($_POST['logout'])) {
         .logout-button:hover {
             background: #e03e3e;
         }
+
+
+        nav {
+    padding: 10px 0;
+    background-color: transparent;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #337ab7;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+
+.social-media-container {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 30px;
+            padding-bottom: 30px;
+        }
+        .social-media-container a {
+            text-decoration: none;
+        }
+        .social-media-container img {
+            width: 100px;
+            height: auto;
+        }
     </style>
 </head>
 <body>
+
+<nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="photo-gallery.html">Photo Gallery</a></li>
+            <li><a href="donate.html">Donate</a></li>
+            <li><a href="membership.php">Membership</a></li>
+            <li><a href="partners.html">Partners</a></li>
+        </ul>
+    </nav>
+
+
     <div class="checkout-container">
         <h1>Checkout</h1>
 
@@ -387,17 +445,25 @@ if (isset($_POST['login-submit'])) {
 
 ?>
     
-    <div style="display: flex; gap: 10px; justify-content: center;">
-  <a href="https://www.facebook.com/friendsofcherryvalley/?ref=embed_page" target="_blank">
-    <img src="https://graph.facebook.com/friendsofcherryvalley/picture?type=small" alt="Friends of Cherry Valley" style="width: 100px; height: auto;" />
-  </a>
-  <a href="https://www.instagram.com/" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/1024px-Instagram_icon.png" alt="Instagram" style="width: 100px; height: auto;" />
-  </a>
-  <a href="https://www.tiktok.com/" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/TikTok_logo_2018.svg/1024px-TikTok_logo_2018.svg.png" alt="TikTok" style="width: 100px; height: auto;" />
-  </a>
-</div>
+    <div class="social-media-container">
+        <a href="https://www.facebook.com/friendsofcherryvalley/?ref=embed_page" target="_blank">
+            <img src="https://graph.facebook.com/friendsofcherryvalley/picture?type=small" alt="Friends of Cherry Valley" />
+        </a>
+        <a href="https://www.instagram.com/" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/1024px-Instagram_icon.png" alt="Instagram" />
+        </a>
+        <a href="https://www.tiktok.com/" target="_blank">
+            <img src="tiktok.png" alt="TikTok" />
+        </a>
+        
+    </div>
+
+    <h2>Join Mailing List</h2>
+    <form action="connectfocv2.php" method="POST">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <button type="submit">Submit</button>
+    </form>
 
 
 

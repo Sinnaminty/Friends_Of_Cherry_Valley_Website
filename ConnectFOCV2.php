@@ -1,5 +1,5 @@
 <?php
-
+/*
 $serverName = "LAPTOP-8O9PNHV2\SQLEXPRESS";
 
 $connectionInfo = [
@@ -14,10 +14,10 @@ if($conn) {
      //Connection didn't work
      die(print_r( sqlsrv_errors(), true));
 }
+*/
 
 
 
-/*
 $serverName = "LAPTOP-8O9PNHV2\SQLEXPRESS";
 
 $connectionInfo = [
@@ -36,7 +36,7 @@ if($conn) {
             $stmt = sqlsrv_prepare($conn, $sql, array(&$email));
 
             if (sqlsrv_execute($stmt)) {
-                echo "Email successfully added to the list!";
+                echo "Email Added.";
             } else {
             }
         } else {
@@ -48,7 +48,7 @@ if($conn) {
 }
 
 sqlsrv_close($conn);
-*/
+
 
 
 
