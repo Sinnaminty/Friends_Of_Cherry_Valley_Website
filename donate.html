@@ -1,56 +1,320 @@
-<!DOCTYPE HTML>
-<!--
-	Dopetrope by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate to Friends of Cherry Valley</title>
+    <link rel = "stylesheet" href = "main.css">
+    <style>
+        /*body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }*/
+        .donate-container {
+            text-align: center;
+            background-color: white;
+            padding: 30px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            width: 80%;
+            max-width: 600px;
+            margin: auto;
+            flex: 1;
+        }
+        .donate-container h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .donate-container p {
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+        .donate-container input[type="text"] {
+            text-align: center;
+            padding: 10px;
+            margin: 10px auto;
+            font-size: 16px;
+            width: 200px;
+        }
+        .donate-container button {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #0070ba;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .donate-container button:hover {
+            background-color: #005f8b;
+        }
+        .social-media-container {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 30px;
+            padding-bottom: 30px;
+        }
+        .social-media-container a {
+            text-decoration: none;
+        }
+        .social-media-container img {
+            width: 100px;
+            height: auto;
+        }
+/*
+        h2 {
+            margin-top: 50px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        form {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        */
+/*
+        nav {
+    padding: 10px 0;
+    background-color: transparent;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #337ab7;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}*/
+/*
+#header {
+		position: relative;
+		background: #ffffff;
+		border-bottom: solid 1px #ccc;
+		padding: 5em 0 4em 0;
+		text-align: center;
+	}
+
+		#header h1 {
+			color: #252122;
+			font-weight: 900;
+			font-size: 2.5em;
+			letter-spacing: -0.035em;
+			line-height: 1;
+		}
+
+#nav {
+		margin: 2.5em 0 0 0;
+	}
+
+		#nav > ul {
+			margin: 0;
+		}
+
+			#nav > ul > li {
+				display: inline-block;
+				font-style: italic;
+				margin: 0 0.35em 0 0.35em;
+			}
+
+				#nav > ul > li > ul {
+					display: none;
+				}
+
+				#nav > ul > li > a {
+					border-radius: 5px;
+					color: #5d5d5d;
+					text-decoration: none;
+					padding: 0.6em 1.2em 0.6em 1.2em;
+					-moz-transition: background-color .25s ease-in-out;
+					-webkit-transition: background-color .25s ease-in-out;
+					-ms-transition: background-color .25s ease-in-out;
+					transition: background-color .25s ease-in-out;
+					outline: 0;
+				}
+
+				#nav > ul > li:hover > a, #nav > ul > li.active > a {
+					background: #f3f3f3;
+				}
+
+				#nav > ul > li.current > a {
+					background: #d52349;
+					color: #fff !important;
+					font-weight: 700;
+				}
+
+/* Footer */
+/*
+                #footer {
+		position: relative;
+		color: #858484;
+		padding: 4em 0;
+	}
+
+		#footer:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			background: url("images/bg01.png");
+			background-size: 100% 100%;
+			z-index: 0;
+			opacity: 0.5;
+		}
+
+		#footer a {
+			color: #c5c4c4;
+		}
+
+		#footer h2, #footer h3, #footer h4, #footer h5, #footer h6, #footer strong, #footer b {
+			color: #fff;
+		}
+
+			#footer h2 a, #footer h3 a, #footer h4 a, #footer h5 a, #footer h6 a, #footer strong a, #footer b a {
+				color: inherit;
+			}
+
+		#footer ul.contact li,
+		#footer ul.dates li,
+		#footer ul.divided li {
+			border-top-color: #353434;
+			border-top-color: rgba(255, 255, 255, 0.05);
+		}
+
+		#footer header {
+			margin: 0 0 3em 0;
+		}
+
+			#footer header h2 {
+				font-size: 1.75em;
+			}
+*/
+/* Copyright */
+/*
+	#copyright {
+		text-align: center;
+		margin: 3em 0 2em 0;
+	}
+
+		#copyright ul.links {
+			display: inline-block;
+			background: #2C2929;
+			background: rgba(255, 255, 255, 0.05);
+			border-radius: 5px;
+			margin: 0;
+			padding: 0.85em 2.25em 0.85em 2.25em;
+		}
+
+        
+                */
+
+    </style>
+</head>
+<body>
+
+    
+
+    <!--
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="photo-gallery.html">Photo Gallery</a></li>
+            <li class="current"><a href="donate.php">Donate</a></li>
+            <li><a href="membership.php">Membership</a></li>
+            <li><a href="partners.html">Partners</a></li>
+        </ul>
+    </nav>
 -->
-<html>
-	<head>
-    <title>Home | Friends of Cherry Valley National Wildlift Refuge</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="CSS/main.css" />
-	</head>
-	<body class="homepage is-preload">
-		<div id="page-wrapper">
 
-			<!-- Header -->
-				<section id="header">
-
-					<!-- Logo -->
-						<h1><a href="index.html">Friends Of Cherry Valley</a></h1>
-
-					<!-- Nav -->
-						<nav id="nav">
-							<ul>
-								<li><a href="index.html">Home</a></li>
-								<li><a href="about-us.html">About Us</a></li>
-								<li><a href="events.html">Events</a></li>
-								<li><a href="photo-gallery.html">Photo Gallery</a></li>
-								<li class="current"><a href="donate.html">Donate</a></li>
-								<li><a href="membership.html">Membership</a></li>
-								<li><a href="partners.html">Partners</a></li>
-							</ul>
-						</nav>
-
-					<!-- Banner -->
-						<section id="banner">
-							<!--Video BG-->
-							<div class = "video-bg">
-								<video autoplay muted loop>
-									<source src ="videos/saving_cherry_valley (540p).mp4" type=""video/mp4">
-								</video>
-
-							</div>
-							<header>
-								<h2>Preserving Cherry Valley since 2002</h2>
-							</header>
-							
-						</section>
-				  
-				</section>
+<section id="header">
+    
+    <h1><a href="index.html">Friends Of Cherry Valley</a></h1>
+    <nav id="nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="photo-gallery.html">Photo Gallery</a></li>
+            <li class="current"><a href="donate.php">Donate</a></li>
+            <li><a href="membership.php">Membership</a></li>
+            <li><a href="partners.html">Partners</a></li>
+        </ul>
+    </nav>
+</section>
+<section id="main">
 
 
+    <div class="donate-container">
+        <h1>Donate to Friends of Cherry Valley</h1>
+        <p>FOCV puts your donation dollars to work in meaningful ways. Individual one-time or recurring monthly donations of any amount can be made via PayPal. Thank you for your support!</p>
+        <p>If you prefer to mail in a donation, please make checks payable to Friends of Cherry Valley National Wildlife Refuge, and mail to 2138 Croasdale Road, Stroudsburg PA 18360.</p>
+
+        <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
+            <input type="hidden" name="cmd" value="_xclick">
+            <input type="hidden" name="business" value="sb-lv8e734183667@business.example.com">
+            <input type="hidden" name="item_name" value="Donation to Friends of Cherry Valley">
+            <input type="hidden" name="currency_code" value="USD">
+            <input type="hidden" name="return" value="http://localhost/FOCV/donate.html">
+            <input type="hidden" name="cancel_return" value="http://localhost/FOCV/donate.html">
+
+            <p>Enter the amount you wish to donate:</p>
+            <input type="text" name="amount" placeholder="Enter amount" required>
+
+            <button type="submit">Donate Now</button>
+        </form>
+    </div>
+
+</section>
+
+    <!--
+    <div class="social-media-container">
+        <a href="https://www.facebook.com/friendsofcherryvalley/?ref=embed_page" target="_blank">
+            <img src="https://graph.facebook.com/friendsofcherryvalley/picture?type=small" alt="Friends of Cherry Valley" />
+        </a>
+        <a href="https://www.instagram.com/" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/1024px-Instagram_icon.png" alt="Instagram" />
+        </a>
+        <a href="https://www.tiktok.com/" target="_blank">
+            <img src="tiktok.png" alt="TikTok" />
+        </a>
+        
+        
+        
+    </div>
+
+
+    <h2>Join Mailing List</h2>
+    <form action="connectfocv2.php" method="POST">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <button type="submit">Submit</button>
+    </form>
+-->
 
 <!-- Footer -->
 <section id="footer">
@@ -69,9 +333,15 @@
 						<h2>Social Media</h2>
 					</header>
 					<ul class="social">
-						<li><a class="icon brands fa-facebook-f" href="#"><span class="label">Facebook</span></a></li>
-						<li><a class="icon brands fa-instagram" href="#"><span class="label">Instagram</span></a></li>
-						<li><a class="icon brands fa-tiktok" href="#"><span class="label">Tiktok</span></a></li>
+						<li><a class="icon brands fa-facebook-f" href="https://www.facebook.com/friendsofcherryvalley/?ref=embed_page">
+							<img src="facebook.png" alt="Facebook" style="width: 42px; height: 42px;"/>
+							<span class="label">Facebook</span></a></li>
+						<li><a class="icon brands fa-instagram" href="https://www.instagram.com/">
+							<img src="instagram.png" alt="Instagram" style="width: 42px; height: 42px;"/>
+							<span class="label">Instagram</span></a></li>
+						<li><a class="icon brands fa-tiktok" href="https://www.tiktok.com/">
+							<img src="tt.webp" alt="TikTok" style="width: 44px; height: 44px;"/>
+							<span class="label">Tiktok</span></a></li>
 					</ul>
 					<ul class="contact">
 						<li>
@@ -105,16 +375,7 @@
 	</div>
 </section>
 
-</div>
+		</div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-
-	</body>
+</body>
 </html>

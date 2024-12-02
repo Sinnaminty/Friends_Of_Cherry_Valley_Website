@@ -1,55 +1,168 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo and Video Gallery | Friends of Cherry Valley</title>
+    <link rel = "stylesheet" href = "main.css">
+    <style>
+        /*
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        nav {
+    padding: 10px 0;
+    background-color: transparent;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #337ab7;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+*/
+
+        header {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 30px;
+        }
+            
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+            padding: 20px;
+        }
+
+        .gallery img, .gallery iframe {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .gallery iframe {
+            height: 200px;
+        }
+
+        .container1 {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /*
+
+        .social-media-container {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 30px;
+            padding-bottom: 30px;
+        }
+        .social-media-container a {
+            text-decoration: none;
+        }
+        .social-media-container img {
+            width: 50px;
+            height: 50px;
+            object-fit: cover; 
+        }
+            */
+    </style>
+</head>
+
+<body>
+    <section id="header">
+    
+        <h1><a href="index.html">Friends Of Cherry Valley</a></h1>
+        <nav id="nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li class="current"><a href="photo-gallery.html">Photo Gallery</a></li>
+            <li><a href="donate.html">Donate</a></li>
+            <li><a href="membership.php">Membership</a></li>
+            <li><a href="partners.html">Partners</a></li>
+        </ul>
+    </nav>
+
+</section>
+<section id="main">
+
+    <!-- Page Header -->
+    <header>
+        <h1>Photo and Video Gallery</h1>
+    </header>
+
+    <!-- Gallery Section -->
+    <div class="container1">
+        <section class="gallery">
+            <!-- Photos -->
+            <img src="photos/photo1.jpg.jpg" alt="Photo 1">
+            <img src="photos/photo2.jpg.jpg" alt="Photo 2">
+            <img src="photos/photo3.jpg.jpg" alt="Photo 3">
+            <img src="photos/photo4.jpg.jpg" alt="Photo 4">
+            <img src="photos/photo5.jpg.jpg" alt="Photo 5">
+            <img src="photos/photo6.jpg.jpg" alt="Photo 6">
+            <img src="photos/photo7.jpg.jpg" alt="Photo 7">
+            <img src="photos/photo8.jpg.jpg" alt="Photo 8">
+            <img src="photos/photo9.jpg.jpg" alt="Photo 9">
+            <img src="photos/photo10.jpg.jpg" alt="Photo 10">
+
+            <!-- Videos -->
+            <iframe src="https://player.vimeo.com/video/364865431" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+            <iframe src="https://player.vimeo.com/video/364865939" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+        </section>
+    </div>
+
+
+</section>
+
 <!--
-	Dopetrope by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+    <div class="social-media-container">
+        <a href="https://www.facebook.com/friendsofcherryvalley/?ref=embed_page" target="_blank">
+            <img src="https://graph.facebook.com/friendsofcherryvalley/picture?type=small" alt="Friends of Cherry Valley" />
+        </a>
+        <a href="https://www.instagram.com/" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/1024px-Instagram_icon.png" alt="Instagram" />
+        </a>
+        <a href="https://www.tiktok.com/" target="_blank">
+            <img src="tiktok.png" alt="TikTok" />
+        </a>
+    </div>
+    
+
+    <h2>Join Mailing List</h2>
+    <form action="connectfocv2.php" method="POST">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <button type="submit">Submit</button>
+    </form>
 -->
-<html>
-	<head>
-    <title>Home | Friends of Cherry Valley National Wildlift Refuge</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="CSS/main.css" />
-	</head>
-	<body class="homepage is-preload">
-		<div id="page-wrapper">
-
-			<!-- Header -->
-				<section id="header">
-
-					<!-- Logo -->
-						<h1><a href="index.html">Friends Of Cherry Valley</a></h1>
-
-					<!-- Nav -->
-						<nav id="nav">
-							<ul>
-								<li><a href="index.html">Home</a></li>
-								<li><a href="about-us.html">About Us</a></li>
-								<li><a href="events.html">Events</a></li>
-								<li class ="current"><a href="photo-gallery.html">Photo Gallery</a></li>
-								<li><a href="donate.html">Donate</a></li>
-								<li><a href="membership.html">Membership</a></li>
-								<li><a href="partners.html">Partners</a></li>
-							</ul>
-						</nav>
-
-					<!-- Banner -->
-						<section id="banner">
-							<!--Video BG-->
-							<div class = "video-bg">
-								<video autoplay muted loop>
-									<source src ="videos/saving_cherry_valley (540p).mp4" type=""video/mp4">
-								</video>
-
-							</div>
-							<header>
-								<h2>Preserving Cherry Valley since 2002</h2>
-							</header>
-							
-						</section>
-				  
-				</section>
-
 
 
 <!-- Footer -->
@@ -69,9 +182,15 @@
 						<h2>Social Media</h2>
 					</header>
 					<ul class="social">
-						<li><a class="icon brands fa-facebook-f" href="#"><span class="label">Facebook</span></a></li>
-						<li><a class="icon brands fa-instagram" href="#"><span class="label">Instagram</span></a></li>
-						<li><a class="icon brands fa-tiktok" href="#"><span class="label">Tiktok</span></a></li>
+						<li><a class="icon brands fa-facebook-f" href="https://www.facebook.com/friendsofcherryvalley/?ref=embed_page">
+							<img src="facebook.png" alt="Facebook" style="width: 42px; height: 42px;"/>
+							<span class="label">Facebook</span></a></li>
+						<li><a class="icon brands fa-instagram" href="https://www.instagram.com/">
+							<img src="instagram.png" alt="Instagram" style="width: 42px; height: 42px;"/>
+							<span class="label">Instagram</span></a></li>
+						<li><a class="icon brands fa-tiktok" href="https://www.tiktok.com/">
+							<img src="tt.webp" alt="TikTok" style="width: 44px; height: 44px;"/>
+							<span class="label">Tiktok</span></a></li>
 					</ul>
 					<ul class="contact">
 						<li>
@@ -105,16 +224,9 @@
 	</div>
 </section>
 
-</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+		</div>
 
 
-	</body>
+</body>
+
 </html>
