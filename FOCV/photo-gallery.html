@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo and Video Gallery | Friends of Cherry Valley</title>
+    <link rel = "stylesheet" href = "main.css">
+    <style>
+        /*
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        nav {
+    padding: 10px 0;
+    background-color: transparent;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #337ab7;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+*/
+
+        header {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 30px;
+        }
+            
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+            padding: 20px;
+        }
+
+        .gallery img, .gallery iframe {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .gallery iframe {
+            height: 200px;
+        }
+
+        .container1 {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /*
+
+        .social-media-container {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 30px;
+            padding-bottom: 30px;
+        }
+        .social-media-container a {
+            text-decoration: none;
+        }
+        .social-media-container img {
+            width: 50px;
+            height: 50px;
+            object-fit: cover; 
+        }
+            */
+    </style>
+</head>
+
+<body>
+    <section id="header">
+    
+        <h1><a href="index.html">Friends Of Cherry Valley</a></h1>
+        <nav id="nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li class="current"><a href="photo-gallery.html">Photo Gallery</a></li>
+            <li><a href="donate.html">Donate</a></li>
+            <li><a href="membership.php">Membership</a></li>
+            <li><a href="partners.html">Partners</a></li>
+        </ul>
+    </nav>
+
+</section>
+<section id="main">
+
+    <!-- Page Header -->
+    <header>
+        <h1>Photo and Video Gallery</h1>
+    </header>
+
+    <!-- Gallery Section -->
+    <div class="container1">
+        <section class="gallery">
+            <!-- Photos -->
+            <img src="photos/photo1.jpg.jpg" alt="Photo 1">
+            <img src="photos/photo2.jpg.jpg" alt="Photo 2">
+            <img src="photos/photo3.jpg.jpg" alt="Photo 3">
+            <img src="photos/photo4.jpg.jpg" alt="Photo 4">
+            <img src="photos/photo5.jpg.jpg" alt="Photo 5">
+            <img src="photos/photo6.jpg.jpg" alt="Photo 6">
+            <img src="photos/photo7.jpg.jpg" alt="Photo 7">
+            <img src="photos/photo8.jpg.jpg" alt="Photo 8">
+            <img src="photos/photo9.jpg.jpg" alt="Photo 9">
+            <img src="photos/photo10.jpg.jpg" alt="Photo 10">
+
+            <!-- Videos -->
+            <iframe src="https://player.vimeo.com/video/364865431" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+            <iframe src="https://player.vimeo.com/video/364865939" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+        </section>
+    </div>
+
+
+</section>
+
+<!--
+    <div class="social-media-container">
+        <a href="https://www.facebook.com/friendsofcherryvalley/?ref=embed_page" target="_blank">
+            <img src="https://graph.facebook.com/friendsofcherryvalley/picture?type=small" alt="Friends of Cherry Valley" />
+        </a>
+        <a href="https://www.instagram.com/" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/1024px-Instagram_icon.png" alt="Instagram" />
+        </a>
+        <a href="https://www.tiktok.com/" target="_blank">
+            <img src="tiktok.png" alt="TikTok" />
+        </a>
+    </div>
+    
+
+    <h2>Join Mailing List</h2>
+    <form action="connectfocv2.php" method="POST">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <button type="submit">Submit</button>
+    </form>
+-->
+
+
+<!-- Footer -->
+<section id="footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-4 col-12-medium">
+				<section>
+					<p>
+						<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScbSqltidbBPF0sJ-89Idld7XFWGlW4ZVXoxMzyScGnkZhIAg/viewform?embedded=true" width="320" height="721" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+					</p>
+				</section>
+			</div>
+			<div class="col-4 col-12-medium">
+				<section>
+					<header>
+						<h2>Social Media</h2>
+					</header>
+					<ul class="social">
+						<li><a class="icon brands fa-facebook-f" href="https://www.facebook.com/friendsofcherryvalley/?ref=embed_page">
+							<img src="facebook.png" alt="Facebook" style="width: 42px; height: 42px;"/>
+							<span class="label">Facebook</span></a></li>
+						<li><a class="icon brands fa-instagram" href="https://www.instagram.com/">
+							<img src="instagram.png" alt="Instagram" style="width: 42px; height: 42px;"/>
+							<span class="label">Instagram</span></a></li>
+						<li><a class="icon brands fa-tiktok" href="https://www.tiktok.com/">
+							<img src="tt.webp" alt="TikTok" style="width: 44px; height: 44px;"/>
+							<span class="label">Tiktok</span></a></li>
+					</ul>
+					<ul class="contact">
+						<li>
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3012.4828198009004!2d-75.1745186234493!3d40.970907321724404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c489f1f668dceb%3A0xcdf75d8a3871d4c8!2sCherry%20Valley%20National%20Wildlife%20Refuge!5e0!3m2!1sen!2sus!4v1726505109626!5m2!1sen!2sus" width="200" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+						</li>
+						<li>
+							<h3>Address</h3>
+							<p>
+								Cherry Valley National Wildlife Refuge Headquarters<br />
+								2138 Croasdale Rd<br />
+								Stroudsburg, PA 18360
+							</p>
+						</li>
+						<li>
+							<h3>Mail</h3>
+							<p><a href = "mailto: friendsofcherryvalley@gmail.com">friendsofcherryvalley@gmail.com</a></p>
+					</ul>
+				</section>
+			</div>
+			<div class="col-12">
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul class="links">
+							<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</div>
+
+			</div>
+		</div>
+	</div>
+</section>
+
+		</div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,171 @@
+<HTML> 
+    <HEAD>
+    <TITLE>JSON</TITLE> 
+    <SCRIPT LANGUAGE= "javascript">
+         var bookstore = `[ 
+                {
+                    "category": "cooking",
+                    "title": "Everyday Italian",
+                    "author": "Giada De Laurentiis",
+                    "year": 2005,
+                    "price": 30.00
+                },
+                {
+                    "category": "children",
+                    "title": "Harry Potter",
+                    "author": "J K. Rowling",
+                    "year": 2005,
+                    "price": 29.99
+                },
+                {
+                    "category": "web",
+                    "title": "XQuery Kick Start",
+                    "author": [
+                        "James McGovern",
+                        "Per Bothner",
+                        "Kurt Cagle",
+                        "James Linn",
+                        "Vaidyanathan Nagarajan"
+                    ],
+                    "year": 2003,
+                    "price": 49.99
+                },
+                {
+                    "category": "web",
+                    "title": "Learning XML",
+                    "author": "Erik T. Ray",
+                    "year": 2003,
+                    "price": 39.95
+                }
+            ]`;
+        </SCRIPT>
+        
+    <SCRIPT LANGUAGE= "javascript">
+    function myfunction1() {
+
+
+                var mydata = JSON.parse(bookstore);
+                var div = document.getElementById('data');
+
+                for (var i = 0; i < mydata.length; i++) {
+    div.innerHTML = div.innerHTML + mydata[i].title + ": ";
+    div.innerHTML = div.innerHTML + mydata[i].year + "<br><br>";
+}
+
+        }
+
+
+        function myfunction2() {
+
+
+var mydata = JSON.parse(bookstore);
+var div = document.getElementById('data');
+
+for (var i = 0; i < mydata.length; i++) {
+div.innerHTML = div.innerHTML + mydata[i].title + ": ";
+if (Array.isArray(mydata[i].author)) {
+    for (var j = 0; j < mydata[i].author.length; j++) {
+                div.innerHTML += mydata[i].author[j];
+                if (j < mydata[i].author.length - 1) {
+                    div.innerHTML += ", ";
+                }
+                
+                
+            }
+            
+            div.innerHTML += "<br><br>";
+} else {
+    div.innerHTML += mydata[i].author;
+    div.innerHTML += "<br><br>";
+}
+}
+}
+
+function myfunction3() {
+
+
+var mydata = JSON.parse(bookstore);
+var div = document.getElementById('data');
+cost = 0;
+for (var i = 0; i < mydata.length; i++) {
+cost += mydata[i].price;
+}
+div.innerHTML = div.innerHTML + cost + "<br><br>";
+
+}
+
+function myfunction4() {
+
+
+var mydata = JSON.parse(bookstore);
+var div = document.getElementById('data');
+
+for (var i = 0; i < mydata.length; i++) {
+    if (mydata[i].year > 2003){
+    div.innerHTML = div.innerHTML + mydata[i].title + "<br><br>";
+    }
+}
+
+
+}
+
+function myfunction5() {
+
+
+var mydata = JSON.parse(bookstore);
+var div = document.getElementById('data');
+
+for (var i = 0; i < mydata.length; i++) {
+div.innerHTML = div.innerHTML + mydata[i].title + ": ";
+div.innerHTML = div.innerHTML + mydata[i].category + "<br><br>";
+}
+
+}
+
+function myfunction6() {
+
+
+var mydata = JSON.parse(bookstore);
+var div = document.getElementById('data');
+var name = document.getElementById("name").value;
+
+for (var i = 0; i < mydata.length; i++) {
+    if (Array.isArray(mydata[i].author)) {
+    for (var j = 0; j < mydata[i].author.length; j++) {
+            if (mydata[i].author[j].includes(name)) {
+                div.innerHTML += mydata[i].title;
+                div.innerHTML += "<br><br>";
+            }
+
+            }
+            
+            
+} else if (mydata[i].author.includes(name)) {
+    div.innerHTML += mydata[i].title;
+    div.innerHTML += "<br><br>";
+}
+
+}
+
+
+
+
+}
+
+
+
+    
+    </SCRIPT> 
+    </HEAD> 
+    <BODY>
+        <div id= "data">
+    <input type = "button" onclick = "myfunction1()" value = "Title and Years">
+    <input type = "button" onclick = "myfunction2()" value = "Title and Authors">
+    <input type = "button" onclick = "myfunction3()" value = "Cost of all Books">
+    <input type = "button" onclick = "myfunction4()" value = "Books released after 2003">
+    <input type = "button" onclick = "myfunction5()" value = "Title and Category">
+    <input type="text" id="name" placeholder="Enter Author Name">
+    <button onclick="myfunction6()">Find Author</button>
+    <br><br>  
+    </BODY>
+    </html>  

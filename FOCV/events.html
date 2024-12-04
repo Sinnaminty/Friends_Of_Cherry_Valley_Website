@@ -1,0 +1,342 @@
+<!DOCTYPE HTML>
+<!--
+	Dopetrope by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<style>
+	body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f9;
+      }
+
+      #page-wrapper {
+        width: 100%;
+        margin: 0;
+      }
+
+      #header {
+        background-color: #333;
+        color: white;
+        padding: 10px;
+        text-align: center;
+      }
+
+      #header h1 {
+        margin: 0;
+      }
+
+      #calendar {
+        margin: 20px;
+      }
+
+      #calendar h2 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      /* Grid layout for calendar */
+      #calendar-grid {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        gap: 5px;
+        text-align: center;
+      }
+
+      .day, .day-name {
+        padding: 15px;
+        border: 1px solid #ddd;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s;
+      }
+
+      .day:hover {
+        background-color: #f0f0f0;
+      }
+
+      .day-name {
+        font-weight: bold;
+        background-color: #f4f4f9;
+        color: #333;
+      }
+
+      /* Event Details */
+      #event-details {
+        margin-top: 20px;
+        background-color: white;
+        padding: 20px;
+        border: 1px solid #ddd;
+      }
+
+      #event-details h3 {
+        margin-top: 0;
+      }
+
+      #event-info h4 {
+        margin: 10px 0;
+      }
+
+      a {
+        color: #4CAF50;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+	  .month-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 15px;
+      }
+
+      .month-header button {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      .month-header button:hover {
+        background-color: #45a049;
+      }
+    </style>
+	<head>
+		<title>Events Calendar</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="main.css" />
+	</head>
+	<body class="no-sidebar is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+			<section id="header">
+				<h1>Events Calendar</h1>
+				<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li><a href="index.html">Home</a></li>
+								<li><a href="about-us.html">About Us</a></li>
+								<li class="current"><a href="events.html">Events</a></li>
+								<li><a href="photo-gallery.html">Photo Gallery</a></li>
+								<li><a href="donate.html">Donate</a></li>
+								<li><a href="membership.php">Membership</a></li>
+								<li><a href="partners.html">Partners</a></li>
+							</ul>
+						</nav>
+			  </section>
+		
+			  <!-- Main Section -->
+			  <section id="main">
+				<div class="container">
+				  
+				  <!-- Calendar Section -->
+				  <section id="calendar">
+					<div class="month-header">
+					  <button id="prev-month">Prev</button>
+					  <h2 id="month-year"></h2>
+					  <button id="next-month">Next</button>
+					</div>
+					<div id="calendar-grid"></div>
+				  </section>
+				  
+				  <!-- Event Details Section -->
+				  <section id="event-details">
+					<h3>Event Details</h3>
+					<div id="event-info"></div>
+				  </section>
+				</div>
+			</section>
+		</div>
+
+			<!-- Footer -->
+<section id="footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-4 col-12-medium">
+				<section>
+					<p>
+						<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScbSqltidbBPF0sJ-89Idld7XFWGlW4ZVXoxMzyScGnkZhIAg/viewform?embedded=true" width="320" height="721" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+					</p>
+				</section>
+			</div>
+			<div class="col-4 col-12-medium">
+				<section>
+					<header>
+						<h2>Social Media</h2>
+					</header>
+					<ul class="social">
+						<li><a class="icon brands fa-facebook-f" href="https://www.facebook.com/friendsofcherryvalley/?ref=embed_page">
+							<img src="facebook.png" alt="Facebook" style="width: 42px; height: 42px;"/>
+							<span class="label">Facebook</span></a></li>
+						<li><a class="icon brands fa-instagram" href="https://www.instagram.com/">
+							<img src="instagram.png" alt="Instagram" style="width: 42px; height: 42px;"/>
+							<span class="label">Instagram</span></a></li>
+						<li><a class="icon brands fa-tiktok" href="https://www.tiktok.com/">
+							<img src="tt.webp" alt="TikTok" style="width: 44px; height: 44px;"/>
+							<span class="label">Tiktok</span></a></li>
+					</ul>
+					<ul class="contact">
+						<li>
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3012.4828198009004!2d-75.1745186234493!3d40.970907321724404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c489f1f668dceb%3A0xcdf75d8a3871d4c8!2sCherry%20Valley%20National%20Wildlife%20Refuge!5e0!3m2!1sen!2sus!4v1726505109626!5m2!1sen!2sus" width="200" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+						</li>
+						<li>
+							<h3>Address</h3>
+							<p>
+								Cherry Valley National Wildlife Refuge Headquarters<br />
+								2138 Croasdale Rd<br />
+								Stroudsburg, PA 18360
+							</p>
+						</li>
+						<li>
+							<h3>Mail</h3>
+							<p><a href = "mailto: friendsofcherryvalley@gmail.com">friendsofcherryvalley@gmail.com</a></p>
+					</ul>
+				</section>
+			</div>
+			<div class="col-12">
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul class="links">
+							<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</div>
+
+			</div>
+		</div>
+	</div>
+</section>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script>
+				// Data structure to store events, added manually in code
+				let events = [
+				  {
+					date: "2024-12-28",
+					title: "Winter Raptor Fest",
+					description: "Join us for guided bird walk",
+					pdf: "Winter Raptor Fest 2024 Flyer.jpg"
+				  },
+				  {
+					date: "2024-11-15",
+					title: "Sample Event 2",
+					description: "This is another event with a different PDF.",
+					pdf: "path_to_pdf/sample2.pdf"
+				  },
+				  {
+					date: "2024-12-05",
+					title: "Sample Event 3",
+					description: "This is another event with a different PDF.",
+					pdf: "Winter Raptor Fest 2024 Flyer (1).jpg"
+				  }
+				];
+		  
+				let currentMonth = new Date().getMonth(); // Current month
+				let currentYear = new Date().getFullYear(); // Current year
+		  
+				// Function to generate the calendar for the current month
+				function generateCalendar() {
+				  const calendarGrid = document.getElementById("calendar-grid");
+				  const monthYear = document.getElementById("month-year");
+				  
+				  // Get the first and last day of the current month
+				  const firstDay = new Date(currentYear, currentMonth, 1);
+				  const lastDay = new Date(currentYear, currentMonth + 1, 0);
+				  
+				  // Array of weekday names
+				  const weekdays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+		  
+				  // Clear previous calendar grid
+				  calendarGrid.innerHTML = '';
+				  monthYear.textContent = `${firstDay.toLocaleString('default', { month: 'long' })} ${currentYear}`;
+		  
+				  // Add weekday names (Sun, Mon, Tue, etc.)
+				  weekdays.forEach(day => {
+					const dayName = document.createElement('div');
+					dayName.classList.add('day-name');
+					dayName.textContent = day;
+					calendarGrid.appendChild(dayName);
+				  });
+		  
+				  // Add blank cells for days before the first of the month
+				  for (let i = 0; i < firstDay.getDay(); i++) {
+					calendarGrid.appendChild(document.createElement('div'));
+				  }
+		  
+				  // Add cells for each day of the month
+				  for (let day = 1; day <= lastDay.getDate(); day++) {
+					const dayCell = document.createElement('div');
+					dayCell.classList.add('day');
+					dayCell.textContent = day;
+					dayCell.setAttribute('data-date', `${currentYear}-${currentMonth + 1}-${day}`);
+					dayCell.addEventListener('click', showEventDetails);
+					calendarGrid.appendChild(dayCell);
+				  }
+				}
+		  
+				// Function to display events for the clicked date
+				function showEventDetails(e) {
+				  const selectedDate = e.target.getAttribute('data-date');
+				  const eventList = events.filter(event => event.date === selectedDate);
+				  
+				  const eventInfo = document.getElementById("event-info");
+				  eventInfo.innerHTML = '';
+		  
+				  if (eventList.length > 0) {
+					eventList.forEach(event => {
+					  eventInfo.innerHTML += `
+						<h4>${event.title}</h4>
+						<p>${event.description}</p>
+						<a href="${event.pdf}" target="_blank">Download PDF</a>
+						<hr />
+					  `;
+					});
+				  } else {
+					eventInfo.innerHTML = '<p>No events for this day.</p>';
+				  }
+				}
+		  
+				// Function to go to the previous month
+				document.getElementById("prev-month").addEventListener("click", function() {
+				  currentMonth--;
+				  if (currentMonth < 0) {
+					currentMonth = 11;
+					currentYear--;
+				  }
+				  generateCalendar();
+				});
+		  
+				// Function to go to the next month
+				document.getElementById("next-month").addEventListener("click", function() {
+				  currentMonth++;
+				  if (currentMonth > 11) {
+					currentMonth = 0;
+					currentYear++;
+				  }
+				  generateCalendar();
+				});
+		  
+				// Initial call to generate the calendar
+				generateCalendar();
+			  </script>
+
+	</body>
+</html>
+
